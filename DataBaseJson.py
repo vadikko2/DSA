@@ -41,7 +41,7 @@ def dlibVectorFormating(data, tolist=True, key_descr = 'descr'):
         if tolist:
             d[key_descr]=[list(dd) for dd in d[key_descr]]
         else:
-            d[key_descr]=[dlib.dlib.vector(dd) for dd in d[key_descr]]
+            d[key_descr]=[dlib.vector(dd) for dd in d[key_descr]]
     return data
 #Перезапись файла
 def writeToJSON(data, filename = 'inroom.json'):

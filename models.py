@@ -3,7 +3,7 @@ import cv2
 import dlib
 
 from keras.models import Model, Sequential, load_model
-from keras.layers import Input, Activation, merge, Dense, Flatten, Dropout
+from keras.layers import Input, Activation, add, Dense, Flatten, Dropout
 from keras.layers.convolutional import Convolution2D, AveragePooling2D
 from keras.layers.normalization import BatchNormalization
 from keras.regularizers import l2
@@ -216,7 +216,7 @@ class WideResNetCreater:
             else:
                 shortcut = net
 
-            return merge([convs, shortcut], mode="sum")
+            return add([convs, shortcut])
 
         return f
 
