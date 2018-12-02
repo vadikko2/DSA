@@ -1,0 +1,25 @@
+#line {
+    width: 60%;
+    text-align: center;
+}
+#line-canvas{
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
+#bars-canvas {
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+},
+#container {
+    width: 60%;
+}
+#bars {
+    float: left;
+    width: 60%;
+}
+#pie {
+    float: right;
+    width: 40%;
+}
